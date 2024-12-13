@@ -26,3 +26,13 @@ export const months = {
 export const stayData = {
   one: "1",
 };
+
+export const alertMessageData = {
+  updated: "updated",
+  delete: "deleted",
+};
+
+export const priceData = {
+  minValue: 90,
+  maxValue: 350,
+};

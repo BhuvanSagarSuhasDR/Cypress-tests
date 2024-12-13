@@ -21,7 +21,7 @@ describe(["API"], "Integration Tests", () => {
     cy.visitPricingPage();
 
     headerPage.assertHeaderIsDisplayed();
-    headerPage.assertPageHeader(headerData.pricingDashboard);
+    headerPage.assertH2Header(headerData.pricingDashboard);
 
     pricingDashboardPage.searchValue(listingData.sunsetWatcherEastAndWestId);
 

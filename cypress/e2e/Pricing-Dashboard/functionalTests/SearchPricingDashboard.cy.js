@@ -15,7 +15,7 @@ describe(["functionalTest"], "Search Field Functionality", () => {
     loginPage.login(Cypress.env("userName"), Cypress.env("password"));
 
     headerPage.assertHeaderIsDisplayed();
-    headerPage.assertPageHeader(headerData.pricingDashboard);
+    headerPage.assertH2Header(headerData.pricingDashboard);
 
     pricingDashboardPage.searchValue(listingData.listingId);
 

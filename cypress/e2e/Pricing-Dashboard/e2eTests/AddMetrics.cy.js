@@ -13,16 +13,14 @@ describe(["e2e"], "Metrics", () => {
     loginPage.login(Cypress.env("userName"), Cypress.env("password"));
 
     headerPage.assertHeaderIsDisplayed();
-    headerPage.assertPageHeader(headerData.pricingDashboard);
+    headerPage.assertH2Header(headerData.pricingDashboard);
 
     metricsPage.clickAddMetrics();
 
     headerPage.assertHeaderInSpanTag(headerData.selectMetrics);
 
     metricsPage.clickAddMetric();
-
     metricsPage.clickLastBookDate();
-
     metricsPage.clickUpdateChanges();
 
     metricsPage.assertColumnIsDisplayed("last_booked_date");
@@ -32,7 +30,6 @@ describe(["e2e"], "Metrics", () => {
     headerPage.assertHeaderInSpanTag(headerData.selectMetrics);
 
     metricsPage.clickDelete();
-
     metricsPage.clickUpdateChanges();
 
     metricsPage.assertColumnIsNotDisplayed("last_booked_date");

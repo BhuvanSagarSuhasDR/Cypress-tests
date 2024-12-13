@@ -1,4 +1,5 @@
 import { listingData } from "../../../fixtures/listingData";
+import { validationTexts } from "../../../fixtures/ValidationTexts";
 import headerPage from "../../../pages/HeaderPage";
 import loginPage from "../../../pages/LoginPage";
 import menuNavigationPage from "../../../pages/MenuNavigationPage";
@@ -29,7 +30,9 @@ describe(["negativeTest"], "Adding Duplicate Tags", () => {
 
     syncPricePage.clickSyncPrice();
 
-    syncPricePage.assertValidationMessage();
+    syncPricePage.assertValidationMessage(
+      validationTexts.toggleValidationTexts
+    );
 
     loginPage.logoutFromMultiCalender();
   });

@@ -1,4 +1,4 @@
-import { months, stayData } from "../../../fixtures/commonData";
+import { months, priceData, stayData } from "../../../fixtures/commonData";
 import { headerData } from "../../../fixtures/headerData";
 import { listingData } from "../../../fixtures/listingData";
 import commonPage from "../../../pages/CommonPage";
@@ -14,14 +14,10 @@ describe(["functionalTest"], "Configure Listing", () => {
   });
 
   it("should verify that the changes made to listing are retained", () => {
-    const data = {
-      minValue: 90,
-      maxValue: 350,
-    };
     loginPage.login(Cypress.env("userName"), Cypress.env("password"));
 
     headerPage.assertHeaderIsDisplayed();
-    headerPage.assertPageHeader(headerData.pricingDashboard);
+    headerPage.assertH2Header(headerData.pricingDashboard);
 
     pricingDashboardPage.searchValue(listingData.sunsetWatcherEastAndWestId);
 
@@ -31,12 +27,12 @@ describe(["functionalTest"], "Configure Listing", () => {
 
     headerPage.assertH3Header(headerData.configurePrices);
 
-    reviewPricesPage.enterMinValue(data.minValue);
-    reviewPricesPage.enterMaxValue(data.maxValue);
+    reviewPricesPage.enterMinValue(priceData.minValue);
+    reviewPricesPage.enterMaxValue(priceData.maxValue);
 
     reviewPricesPage.clickSaveAndRefresh();
 
-    headerPage.assertPageHeader(headerData.dateSpecificOverride);
+    headerPage.assertH2Header(headerData.dateSpecificOverride);
 
     reviewPricesPage.selectMonth(months.february);
     reviewPricesPage.clickOverride();
@@ -47,7 +43,7 @@ describe(["functionalTest"], "Configure Listing", () => {
 
     reviewPricesPage.clickCloseModal();
 
-    headerPage.assertPageHeader(headerData.pricingDashboard);
+    headerPage.assertH2Header(headerData.pricingDashboard);
 
     loginPage.logout();
   });

@@ -51,18 +51,8 @@ class ListingNotesPage {
     this.allNoteButton.click();
   }
 
-  enterNotes(notes) {
-    this.enterNoteField.should("be.visible").type(notes);
-  }
-
   clickSaveNotes() {
     this.saveNotesButton.should("be.visible").click();
-  }
-
-  addNotes(notes) {
-    this.clickAddNotes();
-    this.enterNotes(notes);
-    this.clickSaveNotes();
   }
 
   clickRecentNotes(updatedNotes) {
@@ -71,6 +61,16 @@ class ListingNotesPage {
     })
       .should("be.visible")
       .click();
+  }
+
+  enterNotes(notes) {
+    this.enterNoteField.should("be.visible").type(notes);
+  }
+
+  addNotes(notes) {
+    this.clickAddNotes();
+    this.enterNotes(notes);
+    this.clickSaveNotes();
   }
 
   updatenotes(notes) {

@@ -35,8 +35,11 @@ export default class apiRequests {
         },
       })
       .then((response) => {
-        expect(response.status).to.eq(200);
-        expect(response.headers["content-type"]).to.contain("text/html");
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(response.body, "text/html");
+        const title = doc.querySelector("title").innerText;
+        expect(title).to.eq("PriceLabs - MultiCalendar");
+
         return response;
       });
   }

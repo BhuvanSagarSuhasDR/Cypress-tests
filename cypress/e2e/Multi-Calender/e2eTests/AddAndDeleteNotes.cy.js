@@ -1,3 +1,4 @@
+import { alertMessageData } from "../../../fixtures/commonData";
 import { headerData } from "../../../fixtures/headerData";
 import { listingData } from "../../../fixtures/listingData";
 import { noteData } from "../../../fixtures/notes";
@@ -42,7 +43,10 @@ describe(["e2e"], "Listing Notes", () => {
 
     listingNotesPage.updatenotes(noteData.updateNotes);
 
-    listingNotesPage.assertAlertMessage(listingData.listingName, "updated");
+    listingNotesPage.assertAlertMessage(
+      listingData.listingName,
+      alertMessageData.updated
+    );
 
     commonPage.clickClose();
 
@@ -59,7 +63,10 @@ describe(["e2e"], "Listing Notes", () => {
     listingNotesPage.clickDelete();
     listingNotesPage.clickDeleteNote();
 
-    listingNotesPage.assertAlertMessage(listingData.listingName, "deleted");
+    listingNotesPage.assertAlertMessage(
+      listingData.listingName,
+      alertMessageData.delete
+    );
 
     loginPage.logoutFromMultiCalender();
   });

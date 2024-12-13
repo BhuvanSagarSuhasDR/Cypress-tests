@@ -55,9 +55,8 @@ class ReviewPricesPage {
     this.override.should("be.visible").first().click();
   }
 
-  selectMonth(month) {
-    this.calenderDropDown.should("be.visible").click();
-    cy.contains("span", month);
+  clickAddDateOverrides() {
+    this.dateOverrides.should("be.visible").click();
   }
 
   clickReviewPrices() {
@@ -65,8 +64,9 @@ class ReviewPricesPage {
     this.reviewPricesButton.first({ timeout: 10000 }).click();
   }
 
-  clickAddDateOverrides() {
-    this.dateOverrides.should("be.visible").click();
+  selectMonth(month) {
+    this.calenderDropDown.should("be.visible").click();
+    cy.contains("span", month);
   }
 
   enterMinimumStay(value) {

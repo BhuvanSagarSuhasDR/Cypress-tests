@@ -1,12 +1,12 @@
 import { listingData } from "../../../fixtures/listingData";
 import { tagsData } from "../../../fixtures/tagsData";
+import { validationTexts } from "../../../fixtures/ValidationTexts";
 import headerPage from "../../../pages/HeaderPage";
 import loginPage from "../../../pages/LoginPage";
 import menuNavigationPage from "../../../pages/MenuNavigationPage";
 import multiCalenderPage from "../../../pages/MultiCalenderPage";
 import rowOrColumnPage from "../../../pages/RowOrColumnPage";
 import tagsPage from "../../../pages/TagsPage";
-
 describe(["e2e"], "Tags Functionality", () => {
   beforeEach(function () {
     cy.clearCookies();
@@ -47,12 +47,12 @@ describe(["e2e"], "Tags Functionality", () => {
 
       tagsPage.addNewTag(tagsData.tagName);
 
-      tagsPage.assertAlertMessage();
+      tagsPage.assertAlertMessage(validationTexts.tagsHaveBeenUpdated);
       tagsPage.assertTagNameIsDisplayed(tagsData.tagName);
 
       tagsPage.clickClear();
 
-      tagsPage.assertAlertMessage();
+      tagsPage.assertAlertMessage(validationTexts.tagsHaveBeenUpdated);
       tagsPage.assertTagNameIsNotDisplayed(tagsData.tagName);
 
       loginPage.logoutFromMultiCalender();

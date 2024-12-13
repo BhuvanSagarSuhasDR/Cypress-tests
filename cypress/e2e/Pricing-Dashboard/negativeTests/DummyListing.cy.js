@@ -1,9 +1,9 @@
 import { missingFieldsMessages } from "../../../fixtures/commonData";
 import { headerData } from "../../../fixtures/headerData";
-import commonPage from "../../../pages/commonPage";
+import commonPage from "../../../pages/CommonPage";
 import dummyListingPage from "../../../pages/DummyListingPage";
 import headerPage from "../../../pages/HeaderPage";
-import loginPage from "../../../pages/loginPage";
+import loginPage from "../../../pages/LoginPage";
 
 describe(["negativeTest"], "Dummy listing", () => {
   beforeEach(function () {
@@ -15,11 +15,11 @@ describe(["negativeTest"], "Dummy listing", () => {
     loginPage.login(Cypress.env("userName"), Cypress.env("password"));
 
     headerPage.assertHeaderIsDisplayed();
-    headerPage.assertPageHeader(headerData.pricingDashboard);
+    headerPage.assertH2Header(headerData.pricingDashboard);
 
     dummyListingPage.clickCreateDummyListing();
 
-    headerPage.assertPageHeader(headerData.createDummyListing);
+    headerPage.assertH2Header(headerData.createDummyListing);
 
     dummyListingPage.clickContinue();
 

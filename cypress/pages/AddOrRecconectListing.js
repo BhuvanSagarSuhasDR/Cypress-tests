@@ -29,12 +29,12 @@ class AddOrReconnectListing {
     this.cancelButton.should("be.visible").click();
   }
 
-  selectPMS(pmsValue) {
-    this.getSelectPMS(pmsValue).click();
-  }
-
   clickAddOrReconnectListing() {
     this.addOrReconnectListingButton.should("be.visible").click();
+  }
+
+  selectPMS(pmsValue) {
+    this.getSelectPMS(pmsValue).click();
   }
 
   searchPMS(value) {
@@ -45,8 +45,8 @@ class AddOrReconnectListing {
     this.spanText.should("contain", value);
   }
 
-  assertMessageVisible() {
-    cy.contains("h4", "API key field is empty").should("be.visible");
+  assertMessageVisible(value) {
+    cy.contains("h4", value).should("be.visible");
   }
 }
 export default new AddOrReconnectListing();

@@ -18,7 +18,7 @@ class PricingDashboard {
       .type("{enter}");
   }
 
-  assertPageHeader(header) {
+  assertH2Header(header) {
     this.h2Tag.should("contain", header);
   }
 

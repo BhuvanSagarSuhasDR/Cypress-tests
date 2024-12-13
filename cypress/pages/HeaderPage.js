@@ -15,7 +15,7 @@ class HeaderPage {
     return cy.get("h3", { timeout: 50000 });
   }
 
-  assertPageHeader(header) {
+  assertH2Header(header) {
     this.h2Tag.should("contain", header);
   }
 

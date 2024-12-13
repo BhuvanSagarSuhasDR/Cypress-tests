@@ -14,7 +14,7 @@ describe(["functionalTest"], "Pricing Dashboard", () => {
     loginPage.login(Cypress.env("userName"), Cypress.env("password"));
 
     headerPage.assertHeaderIsDisplayed();
-    headerPage.assertPageHeader(headerData.pricingDashboard);
+    headerPage.assertH2Header(headerData.pricingDashboard);
 
     pricingDashboardCountPage.clickGroup();
 

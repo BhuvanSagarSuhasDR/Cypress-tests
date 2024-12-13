@@ -18,7 +18,7 @@ describe(["functionalTest"], "Row/Column Visibility Functionality", () => {
     loginPage.login(Cypress.env("userName"), Cypress.env("password"));
 
     headerPage.assertHeaderIsDisplayed();
-    headerPage.assertPageHeader(headerData.pricingDashboard);
+    headerPage.assertH2Header(headerData.pricingDashboard);
 
     columnData.columnsVisibility.forEach((column) => {
       rowOrColumnPage.unselectAndAssertColumnVisibility(

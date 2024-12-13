@@ -51,12 +51,12 @@ class TagsPage {
     cy.contains("p", tagName, { timeout: 20000 }).should("not.exist");
   }
 
-  assertAlertMessage() {
-    commonPage.assertMessageVisible("Tags have been updated!");
+  assertAlertMessage(value) {
+    commonPage.assertMessageVisible(value);
   }
 
-  assertTagValidationMessage() {
-    commonPage.assertMessageVisible("Tag already exists");
+  assertTagValidationMessage(value) {
+    commonPage.assertMessageVisible(value);
   }
 }
 export default new TagsPage();

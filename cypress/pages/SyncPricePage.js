@@ -17,10 +17,8 @@ class SyncPricePage {
     this.toggleButton.should("be.disabled");
   }
 
-  assertValidationMessage() {
-    commonPage.assertMessageVisible(
-      `Please toggle the switch under "Sync Prices" to green(ON) to sync your prices overnight.`
-    );
+  assertValidationMessage(value) {
+    commonPage.assertMessageVisible(value);
   }
 }
 export default new SyncPricePage();
