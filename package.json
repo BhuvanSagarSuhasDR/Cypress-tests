@@ -1,0 +1,27 @@
+{
+  "name": "cypress-tests",
+  "version": "1.0.0",
+  "description": "Test Automation",
+  "main": "index.js",
+  "scripts": {
+    "functionalTests": "npx cypress run --env tags='@functionalTest'",
+    "negativeTests": "npx cypress run --env tags='@negativeTest'",
+    "e2eTests": "npx cypress run --env tags='@e2e'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BhuvanSagarSuhasDR/Cypress-tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BhuvanSagarSuhasDR/Cypress-tests/issues"
+  },
+  "homepage": "https://github.com/BhuvanSagarSuhasDR/Cypress-tests#readme",
+  "devDependencies": {
+    "cypress": "^13.16.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-tags": "^1.2.2",
+    "typescript": "^5.7.2"
+  }
+}
