@@ -9,7 +9,7 @@ describe(["functionalTest"], "listing counts", () => {
     cy.clearCookies();
     cy.clearAllSessionStorage();
     cy.fixture("listingCounts").then((data) => {
-      listingCounts = data.listingCounts; // Store the loaded data
+      listingCounts = data.listingCounts;
     });
   });
 
