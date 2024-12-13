@@ -1,24 +1,36 @@
 # Getting Started with Cypress
 
+## Integration/e2e folder
+
+Contains UI tests which split by feature/module wise.
+
+## Fixtures folder
+
+Contains UI tests which split by feature/module wise.
+
+## Pages folder
+
+Contains UI tests which split by feature/module wise.
+
 ## Support folder
 
 Support/index.js is entry point and commands.js - commands for login and logout functions.
 
 ## Utils folder
 
-There are apiRequests.utils.js for api creations.
+The Utils folder contains utility files, such as apiRequests.utils.js, for performing API-related actions.
+
+## Configuration file
+
+The cypress.config.js file contains the configuration settings and environment variables (env). 
 
 ## package.json
 
-package.json file contains environmental and browser details.
-
-## Integration folder
-
-Contains UI tests which split by feature/module wise.
+The package.json file in a Cypress project can contain scripts, environment variables, and browser details.
 
 ## How to run test
 
-Before running the tests, make sure to add the userName and password in the env section of the cypress.config.js file.
+Note: Before running the tests, make sure to add the userName and password in the env section of the cypress.config.js file.
 
 In Test Runner
 
@@ -35,4 +47,4 @@ In Command line
 
 ### Notes
 
-- Do not commit env data to the repository.
+- Do not commit env data like user credentials to the repository.
