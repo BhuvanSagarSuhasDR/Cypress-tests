@@ -45,6 +45,11 @@ In Command line
 
 - It can be run with command - npm run e2eTests
 
+### Open the report
+
+After the tests are run, open the generated HTML file using the below commad
+open cypress/reports/mochawesome-report.html
+
 ### Notes
 
 - Do not commit env data like user credentials to the repository.
