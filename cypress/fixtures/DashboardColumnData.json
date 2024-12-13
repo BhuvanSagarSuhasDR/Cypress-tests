@@ -1,0 +1,6 @@
+{
+  "columnsVisibility": [
+    { "checkboxType": "bedroom-count", "columnName": "BR Count" },
+    { "checkboxType": "city", "columnName": "City" }
+  ]
+}

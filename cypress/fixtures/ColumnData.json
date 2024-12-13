@@ -1,0 +1,6 @@
+{
+  "columns": [
+    { "checkboxType": "city", "columnName": "City" },
+    { "checkboxType": "tags", "columnName": "Tags" }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "listingCounts": [
+    { "option": "10 Listings", "range": "1 to 10" },
+    { "option": "15 Listings", "range": "1 to 15" },
+    { "option": "20 Listings", "range": "1 to 20" }
+  ]
+}
