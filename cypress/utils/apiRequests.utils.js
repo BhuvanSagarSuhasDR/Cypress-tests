@@ -1,10 +1,6 @@
 import { requestData } from "../fixtures/loginData";
 
 export default class apiRequests {
-  getUrl(path) {
-    return Cypress.env("baseUrl") + path;
-  }
-
   getPricelabsUserLogin(email, password) {
     const requestBody = requestData.getPricelabsLoginBody(email, password);
 
@@ -75,10 +71,10 @@ export default class apiRequests {
     return cy
       .request({
         method: "POST",
-        url: url, // Intentionally incorrect URL
+        url: url,
         headers: {
           Accept: "application/json",
-          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
         body: {
           mapped_data: {
@@ -98,5 +94,20 @@ export default class apiRequests {
           error: "Not Found",
         });
       });
+  }
+
+  toggleSyncPrices(payload) {
+    cy.request({
+      method: "POST",
+      url: "https://pricelabs.co/push_price_status",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      body: payload,
+    }).then((response) => {
+      expect(response.status).to.eq(200);
+
+      expect(response.body.sync).to.eq(payload.push_status);
+    });
   }
 }
