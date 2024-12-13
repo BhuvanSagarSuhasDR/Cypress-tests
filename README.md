@@ -18,6 +18,8 @@ Contains UI tests which split by feature/module wise.
 
 ## How to run test
 
+Before running the tests, make sure to add the userName and password in the env section of the cypress.config.js file.
+
 In Test Runner
 
 - Test runner can be opened by - npx cypress open
