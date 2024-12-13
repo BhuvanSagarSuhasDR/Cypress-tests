@@ -6,7 +6,8 @@
   "scripts": {
     "functionalTests": "npx cypress run --env tags='@functionalTest'",
     "negativeTests": "npx cypress run --env tags='@negativeTest'",
-    "e2eTests": "npx cypress run --env tags='@e2e'"
+    "e2eTests": "npx cypress run --env tags='@e2e'",
+    "APITests": "npx cypress run --env tags='@API'"
   },
   "repository": {
     "type": "git",

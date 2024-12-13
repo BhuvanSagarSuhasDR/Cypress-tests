@@ -5,4 +5,5 @@ export const headerData = {
   addOrReconnectListing: "Add/Reconnect Listings",
   selectMetrics: "Select Metrics",
   configurePrices: "Configure Prices",
+  dateSpecificOverride: "Date Specific Override",
 };
