@@ -4,7 +4,7 @@ const { tagify } = require("cypress-tags");
 module.exports = defineConfig({
   chromeWebSecurity: false,
   supportCrossOrigin: true,
-  pageLoadTimeout: 70000,
+  pageLoadTimeout: 100000,
   e2e: {
     baseUrl: "https://pricelabs.co/signin",
     setupNodeEvents(on, config) {
@@ -13,6 +13,9 @@ module.exports = defineConfig({
       return config;
     },
   },
+  viewportWidth: 1440,
+  viewportHeight: 900,
+
   env: {
     userName: "userName",
     password: "password",
