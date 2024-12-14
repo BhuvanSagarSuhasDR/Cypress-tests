@@ -36,3 +36,11 @@ export const priceData = {
   minValue: 90,
   maxValue: 350,
 };
+
+export const groupName = {
+  abc: "abc",
+};
+
+export const pmsValue = {
+  bookinAutomation: "Booking Automation",
+};

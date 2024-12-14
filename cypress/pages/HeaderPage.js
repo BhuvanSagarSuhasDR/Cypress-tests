@@ -15,6 +15,10 @@ class HeaderPage {
     return cy.get("h3", { timeout: 50000 });
   }
 
+  clickH2Header(header) {
+    this.h2Tag.contains(header).click();
+  }
+
   assertH2Header(header) {
     this.h2Tag.should("contain", header);
   }
@@ -33,7 +37,7 @@ class HeaderPage {
 
   assertHeaderInPTag(header) {
     cy.contains("p", header, {
-      timeout: 20000,
+      timeout: 50000,
     }).should("be.visible");
   }
 

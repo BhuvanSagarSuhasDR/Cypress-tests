@@ -1,8 +1,8 @@
-import { headerData } from "../../../fixtures/headerData";
-import { pricingDashboardData } from "../../../fixtures/pricingDashboardData";
+import { headerData } from "../../../fixtures/HeaderData";
+import { pricingDashboardData } from "../../../fixtures/PricingDashboardData";
 import headerPage from "../../../pages/HeaderPage";
 import loginPage from "../../../pages/LoginPage";
-import pricingDashboardCountPage from "../../../pages/pricingDashboardCountPage";
+import pricingDashboardCountPage from "../../../pages/PricingDashboardCountPage";
 
 describe(["functionalTest"], "Pricing Dashboard", () => {
   beforeEach(function () {

@@ -1,5 +1,5 @@
-import { missingFieldsMessages } from "../../../fixtures/commonData";
-import { headerData } from "../../../fixtures/headerData";
+import { missingFieldsMessages } from "../../../fixtures/CommonData";
+import { headerData } from "../../../fixtures/HeaderData";
 import commonPage from "../../../pages/CommonPage";
 import dummyListingPage from "../../../pages/DummyListingPage";
 import headerPage from "../../../pages/HeaderPage";

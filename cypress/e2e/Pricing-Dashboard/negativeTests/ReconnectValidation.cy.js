@@ -1,4 +1,5 @@
-import { headerData } from "../../../fixtures/headerData";
+import { pmsValue } from "../../../fixtures/CommonData";
+import { headerData } from "../../../fixtures/HeaderData";
 import { validationTexts } from "../../../fixtures/ValidationTexts";
 import addOrRecconectListing from "../../../pages/AddOrRecconectListing";
 import headerPage from "../../../pages/HeaderPage";
@@ -17,8 +18,8 @@ describe(["negativeTest"], "Add/Reconnect Listing", () => {
     headerPage.assertH2Header(headerData.pricingDashboard);
 
     addOrRecconectListing.clickAddOrReconnectListing();
-    addOrRecconectListing.searchPMS("Booking Automation");
-    addOrRecconectListing.selectPMS("Booking Automation");
+    addOrRecconectListing.searchPMS(pmsValue.bookinAutomation);
+    addOrRecconectListing.selectPMS(pmsValue.bookinAutomation);
 
     headerPage.assertH2Header(headerData.addOrReconnectListing);
 

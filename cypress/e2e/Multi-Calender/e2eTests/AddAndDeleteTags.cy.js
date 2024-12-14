@@ -1,5 +1,5 @@
-import { listingData } from "../../../fixtures/listingData";
-import { tagsData } from "../../../fixtures/tagsData";
+import { listingData } from "../../../fixtures/ListingData";
+import { tagsData } from "../../../fixtures/TagsData";
 import { validationTexts } from "../../../fixtures/ValidationTexts";
 import headerPage from "../../../pages/HeaderPage";
 import loginPage from "../../../pages/LoginPage";
@@ -7,6 +7,7 @@ import menuNavigationPage from "../../../pages/MenuNavigationPage";
 import multiCalenderPage from "../../../pages/MultiCalenderPage";
 import rowOrColumnPage from "../../../pages/RowOrColumnPage";
 import tagsPage from "../../../pages/TagsPage";
+
 describe(["e2e"], "Tags Functionality", () => {
   beforeEach(function () {
     cy.clearCookies();

@@ -6,4 +6,5 @@ export const headerData = {
   selectMetrics: "Select Metrics",
   configurePrices: "Configure Prices",
   dateSpecificOverride: "Date Specific Override",
+  customizations: "Customizations",
 };

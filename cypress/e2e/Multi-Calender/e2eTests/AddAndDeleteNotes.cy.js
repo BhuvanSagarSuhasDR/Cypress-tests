@@ -1,7 +1,7 @@
-import { alertMessageData } from "../../../fixtures/commonData";
-import { headerData } from "../../../fixtures/headerData";
-import { listingData } from "../../../fixtures/listingData";
-import { noteData } from "../../../fixtures/notes";
+import { alertMessageData } from "../../../fixtures/CommonData";
+import { headerData } from "../../../fixtures/HeaderData";
+import { listingData } from "../../../fixtures/ListingData";
+import { noteData } from "../../../fixtures/Notes";
 import commonPage from "../../../pages/CommonPage";
 import headerPage from "../../../pages/HeaderPage";
 import listingNotesPage from "../../../pages/ListingNotesPage";
@@ -32,15 +32,14 @@ describe(["e2e"], "Listing Notes", () => {
     listingNotesPage.addNotes(noteData.notes);
 
     listingNotesPage.assertAlertMessage(listingData.listingName);
-    commonPage.clickClose();
 
+    commonPage.clickClose();
     listingNotesPage.clickAddNotes();
     listingNotesPage.clickAllNotes();
 
     headerPage.assertHeaderInPTag(headerData.allNotes);
 
     listingNotesPage.clickEdit();
-
     listingNotesPage.updatenotes(noteData.updateNotes);
 
     listingNotesPage.assertAlertMessage(
@@ -53,13 +52,11 @@ describe(["e2e"], "Listing Notes", () => {
     headerPage.assertHeaderInPTag(headerData.allNotes);
 
     commonPage.clickClose();
-
     listingNotesPage.clickAddNotes();
 
     listingNotesPage.assertUpdatedNotes(noteData.updateNotes);
 
     listingNotesPage.clickRecentNotes(noteData.updateNotes);
-
     listingNotesPage.clickDelete();
     listingNotesPage.clickDeleteNote();
 

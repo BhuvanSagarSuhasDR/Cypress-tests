@@ -1,5 +1,5 @@
-import { headerData } from "../../../fixtures/headerData";
-import { listingData } from "../../../fixtures/listingData";
+import { headerData } from "../../../fixtures/HeaderData";
+import { listingData } from "../../../fixtures/ListingData";
 import commonPage from "../../../pages/CommonPage";
 import headerPage from "../../../pages/HeaderPage";
 import loginPage from "../../../pages/LoginPage";

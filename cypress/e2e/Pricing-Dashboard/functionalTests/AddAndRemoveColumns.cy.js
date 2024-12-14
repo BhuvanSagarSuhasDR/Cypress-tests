@@ -1,4 +1,4 @@
-import { headerData } from "../../../fixtures/headerData";
+import { headerData } from "../../../fixtures/HeaderData";
 import headerPage from "../../../pages/HeaderPage";
 import loginPage from "../../../pages/LoginPage";
 import rowOrColumnPage from "../../../pages/RowOrColumnPage";

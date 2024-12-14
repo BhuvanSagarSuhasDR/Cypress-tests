@@ -1,5 +1,5 @@
-import { listingData } from "../../../fixtures/listingData";
-import { tagsData } from "../../../fixtures/tagsData";
+import { listingData } from "../../../fixtures/ListingData";
+import { tagsData } from "../../../fixtures/TagsData";
 import { validationTexts } from "../../../fixtures/ValidationTexts";
 import commonPage from "../../../pages/CommonPage";
 import headerPage from "../../../pages/HeaderPage";
@@ -7,7 +7,7 @@ import loginPage from "../../../pages/LoginPage";
 import menuNavigationPage from "../../../pages/MenuNavigationPage";
 import multiCalenderPage from "../../../pages/MultiCalenderPage";
 import rowOrColumnPage from "../../../pages/RowOrColumnPage";
-import tagsPage from "../../../pages/tagsPage";
+import tagsPage from "../../../pages/TagsPage";
 
 describe(["negativeTest"], "Adding Duplicate Tags", () => {
   beforeEach(function () {
@@ -49,7 +49,7 @@ describe(["negativeTest"], "Adding Duplicate Tags", () => {
 
       tagsPage.addNewTag(tagsData.tagName);
 
-      tagsPage.assertAlertMessage();
+      tagsPage.assertAlertMessage(validationTexts.tagsHaveBeenUpdated);
 
       commonPage.clickClose();
 
@@ -61,11 +61,13 @@ describe(["negativeTest"], "Adding Duplicate Tags", () => {
 
       tagsPage.addNewTag(tagsData.tagName);
 
+      cy.log(validationTexts.tagAlreadyExists);
+
       tagsPage.assertTagValidationMessage(validationTexts.tagAlreadyExists);
 
       tagsPage.clickClear();
 
-      tagsPage.assertAlertMessage();
+      tagsPage.assertAlertMessage(validationTexts.tagsHaveBeenUpdated);
 
       loginPage.logoutFromMultiCalender();
     });

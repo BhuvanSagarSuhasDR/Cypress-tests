@@ -20,7 +20,6 @@ describe(["functionalTest"], "Row/Column Visibility Functionality", () => {
     headerPage.assertHeaderIsDisplayed();
 
     menuNavigationPage.clickMenu();
-
     menuNavigationPage.clickMultiCalender();
 
     menuNavigationPage.assertUrlIsLoaded();

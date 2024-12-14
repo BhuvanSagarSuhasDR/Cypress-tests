@@ -1,4 +1,4 @@
-import { listingData } from "../../../fixtures/listingData";
+import { listingData } from "../../../fixtures/ListingData";
 import { validationTexts } from "../../../fixtures/ValidationTexts";
 import headerPage from "../../../pages/HeaderPage";
 import loginPage from "../../../pages/LoginPage";

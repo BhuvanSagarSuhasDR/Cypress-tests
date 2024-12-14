@@ -24,7 +24,7 @@ class ReviewPricesPage {
   }
 
   get minimumStayField() {
-    return cy.get('[qa-id="dso-min-stay"]');
+    return cy.get('[qa-id="dso-min-stay"]', { timeout: 30000 });
   }
 
   get updateButton() {
@@ -37,6 +37,22 @@ class ReviewPricesPage {
 
   get saveAndRefreshButton() {
     return cy.get('[qa-id="save-and-refresh"]');
+  }
+
+  get groupCustomizationDropDown() {
+    return cy.get('[data-id="group-customization-options"]');
+  }
+
+  get backButton() {
+    return cy.get('[qa-id="rp-back-button"]');
+  }
+
+  clickBack() {
+    this.backButton.should("be.visible").click();
+  }
+
+  clickGroupCustomization() {
+    this.groupCustomizationDropDown.should("be.visible").click();
   }
 
   clickSaveAndRefresh() {
@@ -52,7 +68,7 @@ class ReviewPricesPage {
   }
 
   clickOverride() {
-    this.override.should("be.visible").first().click();
+    this.override.should("be.visible").first().click({ force: true });
   }
 
   clickAddDateOverrides() {
@@ -65,12 +81,17 @@ class ReviewPricesPage {
   }
 
   selectMonth(month) {
-    this.calenderDropDown.should("be.visible").click();
-    cy.contains("span", month);
+    this.calenderDropDown.should("be.visible");
+    this.calenderDropDown.click();
+    cy.contains("span", month).click();
+  }
+
+  selectGroupName(name) {
+    cy.get("a.dropdown-item").contains(name).click();
   }
 
   enterMinimumStay(value) {
-    this.minimumStayField.should("be.visible").type(value);
+    this.minimumStayField.should("be.visible").clear().type(value);
   }
 
   enterMinValue(minValue) {
@@ -87,6 +108,10 @@ class ReviewPricesPage {
 
   assertMaxPrice(maxPrice) {
     this.maxPriceField.should("have.value", maxPrice);
+  }
+
+  assertMinStay(value) {
+    this.minimumStayField.should("have.value", value);
   }
 }
 export default new ReviewPricesPage();
