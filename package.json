@@ -4,10 +4,10 @@
   "description": "Test Automation",
   "main": "index.js",
   "scripts": {
-    "functionalTests": "npx cypress run --env tags='@functionalTest'",
-    "negativeTests": "npx cypress run --env tags='@negativeTest'",
-    "e2eTests": "npx cypress run --env tags='@e2e'",
-    "APITests": "npx cypress run --env tags='@API'"
+    "functionalTests": "npx cypress run --env CYPRESS_INCLUDE_TAGS=functionalTest",
+    "negativeTests": "npx cypress run --env CYPRESS_INCLUDE_TAGS=negativeTest",
+    "e2eTests": "npx cypress run --env CYPRESS_INCLUDE_TAGS=e2e",
+    "APITests": "npx cypress run --env CYPRESS_INCLUDE_TAGS=API"
   },
   "repository": {
     "type": "git",
