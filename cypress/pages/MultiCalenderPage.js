@@ -11,7 +11,7 @@ class MultiCalenderPage {
     this.searchField
       .clear()
       .should("be.visible")
-      .type(listingId, { delay: 100 })
+      .type(listingId, { delay: 200 })
       .type("{enter}");
   }
 
