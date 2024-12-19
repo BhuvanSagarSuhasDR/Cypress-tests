@@ -6,13 +6,13 @@ import menuNavigationPage from "../../../pages/MenuNavigationPage";
 import multiCalenderPage from "../../../pages/MultiCalenderPage";
 import syncPricePage from "../../../pages/SyncPricePage";
 
-describe(["negativeTest"], "Adding Duplicate Tags", () => {
+describe(["negativeTest"], "Disabled toggle", () => {
   beforeEach(function () {
     cy.clearCookies();
     cy.clearAllSessionStorage();
   });
 
-  it("should prevent adding duplicate tags to a listing", function () {
+  it("should display correct validation message when toggle is off", function () {
     loginPage.login(Cypress.env("userName"), Cypress.env("password"));
 
     headerPage.assertHeaderIsDisplayed();
